@@ -56,15 +56,15 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center pt-8 md:pt-12 border-t border-white/10">
             <p className="text-white/50 text-sm mb-4 md:mb-0">© 2024 Praneeth Regonda. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+              <a href="https://github.com/rpraneeth5225" target="_blank" rel="noopener noreferrer" 
                  className="text-white/50 hover:text-white transition-colors">
                 <Github size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://x.com/PraneethSays" target="_blank" rel="noopener noreferrer"
                  className="text-white/50 hover:text-white transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/praneeth-regonda/" target="_blank" rel="noopener noreferrer"
                  className="text-white/50 hover:text-white transition-colors">
                 <Linkedin size={20} />
               </a>
