@@ -110,7 +110,7 @@ export function Hero() {
               <span className="flex items-center gap-2">
                 HIRE ME
                 <Sparkles
-                  className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  className=" opacity-50 group-hover:opacity-100 transition-opacity font-normal group-hover:font-bold"
                   size={14}
                 />
               </span>
