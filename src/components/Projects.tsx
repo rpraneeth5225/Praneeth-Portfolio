@@ -14,18 +14,18 @@ export function Projects() {
     {
       title: 'Personal ',
       subtitle: 'Portfolio.',
-      technologies: ['HTML/CSS', 'JS', 'TS'],
+      technologies: ['JS', 'REACT', 'TS'],
       color: 'bg-gradient-to-br from-[#c9e7ff] to-[#f2e3ff]',
       githubLink: 'https://github.com/rpraneeth5225',
-      liveLink: 'https://example.com'
+      liveLink: 'https://praneeth-dev-portfolio.vercel.app/'
     },
     {
-      title: 'Spotify',
-      subtitle: 'Clone.',
-      technologies: ['HTML/CSS', 'JS'],
+      title: 'Craigslist',
+      subtitle: 'Redesigned.',
+      technologies: ['HTML/CSS', 'JS', 'TS','REACT'],
       color: 'bg-gradient-to-br from-[#e3c9ff] to-[#ffe3f6]',
-      githubLink: 'https://github.com/rpraneeth5225/Spotify-Clone',
-      liveLink: 'https://example.com'
+      githubLink: 'https://github.com/rpraneeth5225/Craigslist-Redesigned-Project',
+      liveLink: 'https://craigslist-redesigned.vercel.app/'
     },
     {
       title: 'Modern Trendy',
@@ -34,15 +34,15 @@ export function Projects() {
       color: 'bg-gradient-to-br from-[#ffcdb0] to-[#ffc4e4]',
       githubLink: 'https://github.com',
       liveLink: 'https://moderntrendystore.com'
+    },
+    {
+      title: 'Expense',
+      subtitle: 'Tracker.',
+      technologies: ['JS', 'TS','REACT'],
+      color: 'bg-gradient-to-br from-[#b0e5ff] to-[#e7c4ff]',
+      githubLink: 'https://github.com/rpraneeth5225/Expense-Tracker-MERN',
+      liveLink: 'https://example.com'
     }
-    // {
-    //   title: 'Umeh',
-    //   subtitle: 'Brand Identity.',
-    //   technologies: ['AI', 'PS'],
-    //   color: 'bg-gradient-to-br from-[#b0e5ff] to-[#e7c4ff]',
-    //   githubLink: 'https://github.com',
-    //   liveLink: 'https://example.com'
-    // }
   ];
 
   return (
