@@ -52,7 +52,7 @@ export function Loader({ onLoadingComplete }: LoaderProps) {
         >
           <div className="h-[3em] relative overflow-hidden w-[200px] mb-8">
             <motion.div
-              className="absolute w-full text-center font-light text-white uppercase tracking-[-0.02em]"
+              className="absolute w-full text-center font-bold text-white uppercase tracking-[-0.02em] "
               initial={{ y: 0 }}
               animate={{ y: progress === 100 ? '100%' : 0 }}
               transition={{ duration: 0.5 }}
