@@ -7,6 +7,8 @@ import { TechStack } from './components/TechStack';
 import { Projects } from './components/Projects';
 import { Footer } from './components/Footer';
 import { Loader } from './components/Loader';
+import { Analytics } from "@vercel/analytics/react";
+
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +32,7 @@ export default function App() {
               <Projects />
             </main>
             <Footer />
+            <Analytics />
           </motion.div>
         )}
       </AnimatePresence>
