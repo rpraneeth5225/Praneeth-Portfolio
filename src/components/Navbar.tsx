@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail, Menu, X } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, Menu, X, FileText } from 'lucide-react';
 import { Link } from './Link';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -52,7 +52,8 @@ export function Navbar() {
     { href: "https://github.com/rpraneeth5225", icon: Github, label: "GitHub" },
     { href: "https://x.com/PraneethSays", icon: Twitter, label: "Twitter" },
     { href: "www.linkedin.com/in/praneeth-regonda", icon: Linkedin, label: "LinkedIn" },
-    { href: "mailto:praneethregonda28@gmail.com", icon: Mail, label: "Email" }
+    { href: "mailto:praneethregonda28@gmail.com", icon: Mail, label: "Email" },
+    { href: "/Praneeth_SWE.pdf", icon: FileText, label: "Resume" }
   ];
 
   return (
@@ -78,14 +79,11 @@ export function Navbar() {
       </div>
 
       {/* Desktop Social Icons */}
-      <div className="hidden md:flex gap-6">
+      <div className="hidden md:flex gap-6 items-center">
         {socialLinks.map(({ href, icon: Icon, label }) => (
-          <motion.a
+          <motion.div
             key={label}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/70 hover:text-white transition-all duration-300"
+            className="relative group"
             whileHover={{ 
               scale: 1.2,
               rotate: 360,
@@ -93,8 +91,33 @@ export function Navbar() {
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <Icon size={20} />
-          </motion.a>
+            <motion.a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/70 hover:text-white transition-all duration-300"
+            >
+              <Icon size={20} />
+            </motion.a>
+            
+            {/* Resume tooltip */}
+            {label === "Resume" && (
+              <motion.div
+                className="absolute -top-12 -left-2 bg-green-400 text-black px-3 py-1 rounded-lg text-xs font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                initial={{ opacity: 0, y: 10 }}
+                whileHover={{ opacity: 1, y: 0 }}
+              >
+                <div className="flex items-center gap-1">
+                  <span>Resume</span>
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                {/* Arrow pointing down */}
+                <div className="absolute top-full left-3 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-green-400"></div>
+              </motion.div>
+            )}
+          </motion.div>
         ))}
       </div>
 
@@ -161,12 +184,9 @@ export function Navbar() {
                 variants={itemVariants}
               >
                 {socialLinks.map(({ href, icon: Icon, label }) => (
-                  <motion.a
+                  <motion.div
                     key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/70 hover:text-white transition-all duration-300"
+                    className="relative group"
                     whileHover={{ 
                       scale: 1.2,
                       rotate: 360,
@@ -174,8 +194,33 @@ export function Navbar() {
                     }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <Icon size={24} />
-                  </motion.a>
+                    <motion.a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/70 hover:text-white transition-all duration-300"
+                    >
+                      <Icon size={24} />
+                    </motion.a>
+                    
+                    {/* Resume tooltip for mobile */}
+                    {label === "Resume" && (
+                      <motion.div
+                        className="absolute -top-12 -left-2 bg-green-400 text-black px-3 py-1 rounded-lg text-xs font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileHover={{ opacity: 1, y: 0 }}
+                      >
+                        <div className="flex items-center gap-1">
+                          <span>Resume</span>
+                          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        {/* Arrow pointing down */}
+                        <div className="absolute top-full left-3 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-green-400"></div>
+                      </motion.div>
+                    )}
+                  </motion.div>
                 ))}
               </motion.div>
             </motion.div>
