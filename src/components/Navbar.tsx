@@ -45,6 +45,7 @@ export function Navbar() {
   const navLinks = [
     { href: "#home", label: "HOME" },
     { href: "#projects", label: "PROJECTS" },
+    { href: "/playground", label: "PLAYGROUND" },
     { href: "https://medium.com/@praneethregonda", label: "BLOG" },
   ];
 
