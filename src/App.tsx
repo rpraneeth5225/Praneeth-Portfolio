@@ -25,7 +25,7 @@ export default function App() {
             transition={{ duration: 2 }}
           >
             <Navbar />
-            <main className="space-y-0">
+            <main className="space-y-0"> 
               <Hero />
               <DevText />
               <TechStack />
