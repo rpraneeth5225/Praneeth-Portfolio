@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Mail, Phone, Github, Linkedin, Twitter, ArrowUpRight } from 'lucide-react';
+import { motion, useInView } from 'framer-motion';
 
 export function Footer() {
   const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,22 +33,22 @@ export function Footer() {
         <div className={`transform transition-all duration-1000 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          <h2 className="text-white/70 text-sm tracking-widest mb-8 md:mb-12">GET IN TOUCH —</h2>
+          <h2 className="text-white/70 text-base tracking-widest mb-8 md:mb-12">GET IN TOUCH —</h2>
           
           <div className="mb-12 md:mb-24">
             <h3 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">Let's work together</h3>
-            <p className="text-white/70 mb-6 md:mb-8 max-w-md text-sm md:text-base">
+            <p className="text-white/70 mb-6 md:mb-8 max-w-md text-base md:text-lg">
               Have a project in mind? Looking to partner or work together? Feel free to reach out through email or phone.
             </p>
             <div className="flex flex-col gap-4">
               <a href="mailto:your.email@example.com" 
-                 className="flex items-center gap-2 text-white/70 hover:text-white transition-colors group text-sm md:text-base">
+                 className="flex items-center gap-2 text-white/70 hover:text-white transition-colors group text-base md:text-lg">
                 <Mail size={20} />
                 <span>praneethregonda28@gmail.com</span>
                 <ArrowUpRight className="opacity-0 group-hover:opacity-100 transition-opacity" size={16} />
               </a>
               <a href="tel:+1234567890" 
-                 className="flex items-center gap-2 text-white/70 hover:text-white transition-colors group text-sm md:text-base">
+                 className="flex items-center gap-2 text-white/70 hover:text-white transition-colors group text-base md:text-lg">
                 <Phone size={20} />
                 <span>+1 (551) 229-8332</span>
                 <ArrowUpRight className="opacity-0 group-hover:opacity-100 transition-opacity" size={16} />
@@ -54,7 +57,7 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-center pt-8 md:pt-12 border-t border-white/10">
-            <p className="text-white/50 text-sm mb-4 md:mb-0">© 2024 Praneeth Regonda. All rights reserved.</p>
+            <p className="text-white/50 text-base mb-4 md:mb-0">© 2024 Praneeth Regonda. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="https://github.com/rpraneeth5225" target="_blank" rel="noopener noreferrer" 
                  className="text-white/50 hover:text-white transition-colors">
