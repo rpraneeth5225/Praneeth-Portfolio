@@ -22,7 +22,7 @@ export function DevText() {
   return (
     <motion.div 
       ref={ref}
-      className="py-20 md:py-32 bg-black overflow-hidden"
+      className="pt-8 md:pt-16 pb-20 md:pb-32 bg-black overflow-hidden"
       style={{ opacity }}
     >
       <motion.div 
