@@ -6,6 +6,7 @@ import { Playground } from './components/Playground';
 import { PlaygroundButton } from './components/PlaygroundButton';
 import { Loader } from './components/Loader';
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +23,7 @@ export default function App() {
             </Routes>
             <PlaygroundButton />
             <Analytics />
+            <SpeedInsights />
           </>
         )}
       </AnimatePresence>
